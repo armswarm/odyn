@@ -43,9 +43,9 @@ RUN \
  && chmod +x /bin/odyn \
 
 # clean up
- apk del --purge \
-	build-dependencies && \
- rm -rf \
+ && apk del --purge \
+	build-dependencies \
+ && rm -rf \
 	/tmp/*
 
 ENTRYPOINT ["/bin/odyn"]
